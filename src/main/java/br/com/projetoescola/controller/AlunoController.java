@@ -36,10 +36,9 @@ public class AlunoController {
 
 	}
 
-
 	@PostMapping()
-	public void cadastrar () {
-		
+	public void cadastrar() {
+		System.out.println("cadastrando aluno");
 	}
-	
+
 }
