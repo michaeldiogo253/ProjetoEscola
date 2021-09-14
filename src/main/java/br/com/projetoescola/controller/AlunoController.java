@@ -24,7 +24,7 @@ public class AlunoController {
 
 	@GetMapping()
 	@Transactional
-	public ResponseEntity<List<AlunoDto>> listarTodosAlunos() {
+	public ResponseEntity<List<AlunoDto>> listarTodosAlunosBranchParaApagar() {
 		return alunoService.retornaTodosAlunos();
 
 	}
@@ -37,8 +37,10 @@ public class AlunoController {
 	}
 
 	@PostMapping()
-	public void cadastrar() {
-		System.out.println("cadastrando aluno");
+
+	@Transactional
+	public void cadastrarAluno() {
+
 	}
 
 }
