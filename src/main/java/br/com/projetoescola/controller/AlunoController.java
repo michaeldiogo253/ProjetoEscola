@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ public class AlunoController {
 
 	@GetMapping()
 	@Transactional
-	public ResponseEntity<List<AlunoDto>> listarTodosAlunos() {
+	public ResponseEntity<List<AlunoDto>> listarTodosAlunosBranchParaApagar() {
 		return alunoService.retornaTodosAlunos();
 
 	}
@@ -32,6 +33,12 @@ public class AlunoController {
 	@Transactional
 	public ResponseEntity<?> buscaAlunoEspecifico(@PathVariable Long id) {
 		return alunoService.buscaAlunoPorId(id);
+
+	}
+
+	@PostMapping()
+	@Transactional
+	public void cadastrarAluno() {
 
 	}
 
