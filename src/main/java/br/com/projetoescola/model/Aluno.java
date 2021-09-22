@@ -13,9 +13,16 @@ public class Aluno {
 	private Long id;
 	private String nome;
 	private int idade;
+	private String cpf;
 
 	public Aluno() {
 
+	}
+
+	public Aluno(String nome, int idade, String cpf) {
+		this.nome = nome;
+		this.idade = idade;
+		this.cpf = cpf;
 	}
 
 	public Long getId() {
@@ -40,6 +47,14 @@ public class Aluno {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 }

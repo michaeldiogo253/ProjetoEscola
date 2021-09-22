@@ -6,4 +6,6 @@ import br.com.projetoescola.model.Aluno;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Long> {
 
+	
+
 }
